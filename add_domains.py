@@ -10,6 +10,6 @@ with open("./email_domains.txt",'r') as file:
         domains += line.strip('\n') + ' '
     result = os.system('python2 /opt/iredapd/tools/spf_to_greylist_whitelists.py %s' % domains)
     if result == 0:
-        print('请检查脚本')
+        print('添加完成')
     else:
-        print("添加完成")
+        print("请检查脚本")
